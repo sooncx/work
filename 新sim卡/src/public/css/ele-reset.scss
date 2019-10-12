@@ -1,0 +1,150 @@
+@import "./base";
+
+ .el-dialog {
+  min-width: 300px;
+  font-size: 14px;
+  .el-dialog__header {
+    border-bottom: 1px solid #f3f4f8;
+    padding: 10px 20px;
+    .el-dialog__title {
+      color: $btnColor;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .el-dialog__headerbtn {
+      top: 15px;
+      right: 20px;
+      .el-dialog__close:hover {
+        color: $btnColor;
+      }
+    }
+  }
+  .el-dialog__footer {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .input-item {
+    height: 30px;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    height: auto;
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+    label {
+      color: #5a5c6f;
+      margin-right: 10px;
+      width: 60px;
+    }
+    input {
+      background: #f3f7fb;
+      color: #828588;
+      border: none;
+      outline: 0;
+      padding: 0 15px;
+      height: 30px;
+    }
+    textarea {
+      flex: 1;
+    }
+    .split-line {
+      width: 20px;
+      height: 3px;
+      margin: auto 10px;
+      background: #b5c0ce;
+    }
+  }
+}
+
+.el-button {
+    border-radius: 0!important;
+    border-color: $btnColor!important;
+    color: $btnColor!important;
+    background: #fff!important;
+}
+.el-button--primary {
+    background: $btnColor!important;
+    border-color: $btnColor!important;
+    color: #fff!important;
+}
+.el-button--danger {
+    background: #d71818!important;
+    border-color: #d71818!important;
+    color: #fff!important;
+}
+
+ .el-select {
+  width: 180px;
+  margin-left: 10px;
+  &:nth-child(1) {
+    margin: 0;
+  }
+  .el-input--suffix {
+    .el-input__inner {
+      background: #f3f7fb;
+      color: #828588;
+      border: none;
+    }
+  }
+}
+.el-select-dropdown {
+  .el-select-dropdown__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 15px;
+    color: #828588;
+  }
+  .el-select-dropdown__item.selected {
+    color: $btnColor;
+  }
+}
+
+.el-table {
+  font-size: 14px;
+  .cell {
+    line-height: 26px;
+  }
+  &::before {
+    display: none;
+  }
+  thead {
+    th {
+      background: #f5f8fc;
+      div {
+        line-height: 1;
+        text-align: center;
+        color: $fgray;
+      }
+    }
+  }
+  tbody {
+    overflow: auto;
+    tr {
+      td {
+        text-align: center;
+        border: none;
+        color: $fgray;
+      }
+    }
+    tr.el-table__row--striped {
+      td {
+        background: #f5f8fc;
+      }
+    }
+  }
+}
+
+ .el-pagination {
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  & > span {
+    margin: 0;
+  }
+  .el-pagination__total {
+    margin-right: auto;
+  }
+}

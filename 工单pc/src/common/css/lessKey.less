@@ -1,0 +1,132 @@
+@c-green:#009900;
+@c-333:#333;
+@c-999:#999;
+@c-fff:#fff;
+@c-blue:#35C0F8;
+@c-activeColarblue:#35C0F8;
+@c_border_de:#e6e6e6;
+@c_border_ccc:#ccc;
+@c_border_FF8200:#FF8200;
+@c-red:#E82F2F;
+@c-FF6C60:#FF6C60;
+@c-c1:#C1C1C1;
+@c-e3:#E3E3E3;
+@c-blue2:#54C5FF;
+@c-FF7628:#FF7628;
+@c-active:#ddd;
+@c-406DEF:#406DEF;
+/**/
+// @SPACE_SIZE: 0.2rem;
+// @SPACE_SIZE2:0.4rem;
+// @SPACE_SIZE3:0.6rem;
+// @SPACE_SIZE4:0.8rem;
+// @BORDER_RADIUS:0.2rem;
+@SPACE_SIZE: 5px;
+@SPACE_SIZE2:10px;
+@SPACE_SIZE3:15px;
+@SPACE_SIZE4:20px;
+@SPACE_SIZE6:30px;
+@BORDER_RADIUS:5px;
+
+/*布局*/
+.mixin-flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+.mixin-flex(@values) {
+-webkit-box-flex: @values;
+-moz-box-flex:  @values;
+-webkit-flex:  @values;
+-ms-flex:  @values;
+flex:  @values;
+}
+.mixin-animation(){
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.mixin-order(@val) {
+  -webkit-box-ordinal-group: @val;  
+  -moz-box-ordinal-group: @val;     
+  -ms-flex-order: @val;     
+  -webkit-order: @val;  
+  order: @val;
+}
+@font-size-base: 75;
+
+
+@f12: 12px;
+@f14:14px;
+@f16:16px;
+@f18:18px;
+@f20: 20px;
+@f22: 22px;
+@f24:24px;
+@f26: 26px;
+@f28: 28px;
+@f30: 30px;
+@f32:32px;
+
+@f34: 34px;
+
+@f36: 36px;
+@f38: 38px;
+@f40: 40px;
+
+
+
+.wen-oh{
+	width: 100%;
+	white-space:nowrap; 
+  text-overflow:ellipsis; 
+  -o-text-overflow:ellipsis; 
+  overflow: hidden; 
+  }
+
+/******************/
+.mixin-triangle-down(@color,@size,@size2){ 
+width: 0; 
+height: 0; 
+border-left: @size solid transparent; 
+border-right: @size solid transparent; 
+border-top: @size2 solid @color; 
+} 
+.mixin-triangle-left(@color,@size,@size2){ 
+  width: 0; 
+  height: 0; 
+  border-top: @size solid transparent; 
+  border-bottom: @size solid transparent; 
+  border-right: @size2 solid @color; 
+  } 
+.mixin-triangle-right(@color,@size,@size2){ 
+  width: 0; 
+  height: 0; 
+  border-top: @size solid transparent; 
+  border-bottom: @size solid transparent; 
+  border-left: @size2 solid @color; 
+  } 
+.mixin-triangle-up(@color,@size,@size2){ 
+  width: 0; 
+  height: 0; 
+  border-left: @size solid transparent; 
+  border-right: @size solid transparent; 
+  border-bottom: @size2 solid @color; 
+  } 
+.plugin-transparent{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0, 0, 0.2)
+}

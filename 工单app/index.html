@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>my-project</title>
+    <!-- <link rel="stylesheet" href="https://at.alicdn.com/t/font_1059045_8n36hd5tuy.css"> -->
+    <script>
+      // rem适配
+      (function (doc, win) {
+        var docEl = doc.documentElement
+        var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+        var recalc = function () {
+          var clientWidth = docEl.clientWidth
+          if (!clientWidth) return
+          if (clientWidth >= 640) {
+            window.rootFontSize = 100
+            docEl.style.fontSize = '100px'
+          } else {
+            window.rootFontSize = 100 * (clientWidth / 750)
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px' // iphone6
+          }
+        }
+        if (!doc.addEventListener) return
+        win.addEventListener(resizeEvt, recalc, false)
+        doc.addEventListener('DOMContentLoaded', recalc, false)
+      })(document, window)
+  
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script src="https://webapi.amap.com/maps?v=1.4.8&key=8ebe8b1bf92a362d7e8bc8a75c01be8f&callback=OnAMapApiLoaded"></script>
+
+</html>
