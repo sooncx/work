@@ -8,7 +8,7 @@
     "build": "webpack --mode production --progress --config build/webpack.prod.conf.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dayjs": "^1.8.8",
     "echarts": "^4.3.0",
     "element-ui": "^2.3.2",
